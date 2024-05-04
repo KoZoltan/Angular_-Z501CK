@@ -1,1 +1,26 @@
-<p>patient-editor works!</p>
+<h3 class="w-50 text-center">Edit patient</h3>
+
+@if (patient$ | async; as patient) {
+    <form #editForm="ngForm" (ngSubmit)="onUpdate(patient)" class="w-50 mx-auto"></form>
+
+    <div class="form-group mt-3" >
+        <label for="TAJ">TAJ</label>
+        <input type="number" name="TAJ" id="TAJ" class="form-control" [(ngModel)]="patient.TAJ">
+    </div>
+    <div class="form-group mt-3">
+        <label for="Full_name">Full_name</label>
+        <input type="text" name="Full_name" id="Full_name" class="form-control" [(ngModel)]="patient.Full_name">
+    </div>
+    <div class="form-group mt-3">
+        <label for="dateOfBirth">dateOfBirth</label>
+        <input type="date" name="dateOfBirth" id="dateOfBirth" class="form-control" [(ngModel)]="patient.dateOfBirth">
+    </div>
+    <div class="form-group mt-3">
+        <label for="Koortartetnet">Koortartetnet</label>
+        <input type="text" name="Koortartetnet" id="Koortartetnet" class="form-control" [(ngModel)]="patient.Koortartetnet">
+    </div>
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+}
+
