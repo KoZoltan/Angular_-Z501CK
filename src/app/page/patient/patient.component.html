@@ -13,6 +13,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>Id</th>
                     <th>TAJ</th>
                     <th>Full_name</th>
                     <th>dateOfBirth</th>
@@ -23,6 +24,7 @@
             <tbody>
                @for (patient of list$ | async; track $index) {
                     <tr>
+                        <td>{{patient.id}}</td>
                         <td>{{patient.TAJ}}</td>
                         <td>{{patient.Full_name}}</td>
                         <td>{{patient.dateOfBirth}}</td>

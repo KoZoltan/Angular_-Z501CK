@@ -14,6 +14,10 @@ export const routes: Routes = [
         path: 'patient/edit/:TAJ',
         loadComponent: () => import('./page/patient-editor/patient-editor.component').then(m => m.PatientEditorComponent)
     },
+{
+    path: 'visit',
+        loadComponent: () => import('./page/visit/visit.component').then(m => m.VisitComponent)
+    },
 
     {
         path: '**',
